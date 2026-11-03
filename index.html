@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broke - MTG Format</title>
+    <!-- Pico CSS v2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="//cdn.jsdelivr.net/npm/mana-font@latest/css/mana.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+    <header class="container">
+        <hgroup style="text-align: center; margin-bottom: 2rem;">
+            <h1>BROKE</h1>
+            <p>A new budget-friendly Magic: The Gathering format</p>
+        </hgroup>
+        <!--<article style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+            <img src="https://placehold.co/1200x400/1a1d24/e2e8f0?text=Broke+MTG+Format+Banner" alt="Broke Format Banner" id="format-banner" style="width: 100%; height: auto; display: block;">
+        </article>-->
+    </header>
+
+    <main class="container">
+        <!-- Format Description Section -->
+        <article>
+            <header style="text-align: center;">
+                <h2>About the Format</h2>
+            </header>
+            <p>
+                [Insert format description here. Explain the philosophy, rules, deck building constraints, and why "Broke" is fun to play!]
+            </p>
+            <div class="grid" style="text-align: center; margin-top: 1.5rem;">
+                <article>
+                    <h3 style="margin-bottom: 0.25rem;">60 + 15</h3>
+                    <small>Main deck + Sideboard</small>
+                </article>
+                <article>
+                    <h3 style="margin-bottom: 0.25rem;">C / U</h3>
+                    <small>Commons & Uncommons only</small>
+                </article>
+                <article>
+                    <h3 style="margin-bottom: 0.25rem;">4x</h3>
+                    <small>Max copies limit</small>
+                </article>
+            </div>
+        </article>
+
+        <!-- Scryfall Search Query Section -->
+        <article>
+            <header style="text-align: center;">
+                <h2>Scryfall Search Query</h2>
+            </header>
+            <p>Use this search string on Scryfall to find all legal cards for the Broke format:</p>
+
+            <pre><code id="scryfall-query">((game:paper) (set:fra OR set:hob OR set:msh OR set:sos OR set:tmt OR set:ecl OR set:tla OR set:spm OR set:eoe OR set:fin OR set:tdm OR set:dft OR set:fdn) (rarity:c OR rarity:u))</code></pre>
+
+            <div class="grid" style="margin-top: 1rem;">
+                <button type="button" onclick="copyScryfallQuery()" id="copy-btn" class="secondary">
+                    <svg class="copy-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.5rem;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span>Copy Query</span>
+                </button>
+                <button type="button" onclick="openScryfall()" class="primary">
+                    <span>Open on Scryfall &rarr;</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- Banlist Section -->
+        <article>
+            <header style="text-align: center;">
+                <h2>Banned Cards</h2>
+            </header>
+            <p>No bans for now!</p>
+
+            <div class="grid" id="banlist-container">
+                <!--<article style="border-left: 4px solid var(--pico-del-color, #e53935);">
+                    <strong style="display: block;">[Banned Card 1]</strong>
+                    <small>Reason: Overpowered engine</small>
+                </article>
+                <article style="border-left: 4px solid var(--pico-del-color, #e53935);">
+                    <strong style="display: block;">[Banned Card 2]</strong>
+                    <small>Reason: Format warp</small>
+                </article>
+                <article style="border-left: 4px solid var(--pico-del-color, #e53935);">
+                    <strong style="display: block;">[Banned Card 3]</strong>
+                    <small>Reason: Infinite combo pieces</small>
+                </article>-->
+            </div>
+        </article>
+
+        <!-- Decks Table Section -->
+        <article>
+            <header style="text-align: center;">
+                <h2>Premade Decklists for Inspiration</h2>
+            </header>
+
+            <input type="search" id="deck-search" placeholder="Search decks by name, colors, or archetype..." onkeyup="filterDecks()">
+
+            <div class="overflow-auto">
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Deck Name</th>
+                            <th scope="col">Colors</th>
+                            <th scope="col">Archetype</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="decks-table-body">
+                        <!-- Populated via script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </main>
+
+    <footer class="container" style="text-align: center; margin-top: 3rem;">
+        <p><small>Broke MTG Format &bull; Built for fun & budget Magic</small></p>
+        <p><small style="opacity: 0.7;">Magic: The Gathering is TM and copyright Wizards of the Coast, Inc. Broke is an unofficial fan format.</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* Custom minor enhancements complementing Pico CSS v2 */
+
+/* MTG Mana Badges */
+.color-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 0.25rem;
+    font-family: monospace;
+}
+.color-W { background-color: #fff9d6; color: #111; }
+.color-U { background-color: #a1d6e2; color: #111; }
+.color-B { background-color: #3b3a3e; color: #eee; }
+.color-R { background-color: #f28b82; color: #111; }
+.color-G { background-color: #a8e6cf; color: #111; }
+.color-C { background-color: #cccccc; color: #111; }
+
+/* Custom code block styling for Scryfall query */
+pre code {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
