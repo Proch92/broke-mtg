@@ -21,6 +21,13 @@ const exampleDecks = [
         author: "Community",
         url: "https://moxfield.com/decks/OVXqW4fpqE2arvSBj--mpQ"
     },
+    {
+        name: "Gruul Ramp",
+        colors: ["R", "G"],
+        archetype: "Ramp",
+        author: "Community",
+        url: "https://moxfield.com/decks/247xQoKzX02-2b8bBQdcig"
+    },
 ];
 
 // Function to copy Scryfall query to clipboard
